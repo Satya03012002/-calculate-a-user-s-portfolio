@@ -58,12 +58,7 @@ app.get("/:id",async (req,res)=>{
     gainOrLossPercentage = ((netGrowthOrLoss / netFundAdded) * 100).toFixed(2);
   }
 
-  const response = {
-    netFundAdded,
-    currentFund,
-    netGrowthOrLoss,
-    gainOrLossPercentage: `${gainOrLossPercentage}%`,
-  };
+  const response = {netFundAdded, currentFund, netGrowthOrLoss, gainOrLossPercentage: `${gainOrLossPercentage}%`};
 
   res.json(response);
 })
